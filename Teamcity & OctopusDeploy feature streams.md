@@ -50,7 +50,8 @@ At the project level override:
   - set `Branch filter` to
     ```
     +:<default>
-    +:stream/*
+    +:F*
+    +:P*
     ```
 
 ### *Build Configurations* - Deploy CI
@@ -62,8 +63,12 @@ At the project level override:
 - Build Step: OctopusDeploy: Deploy release
   - check `Environment(s):` is `%Channel-Name%-CI`
 - Triggers > Finish Build Trigger
-  - clear up `Branch filter` text area  
-  - save
+  - set `Branch filter` to
+    ```
+    +:<default>
+    +:F*
+    +:P*
+    ```
 - Dependencies
   - check conditions
   
@@ -72,10 +77,14 @@ At the project level override:
 - Build Step: > NUnit
   - setup `Run tests from` to use one of `%Channel-Name%-CI` or `%Channel-Name%-REG` or `%Channel-Name%-PERF` instead of hardcoded environments
 - Triggers > Finish Build Trigger
-  - clear up `Branch filter` text area  
-  - save
+  - set `Branch filter` to
+    ```
+    +:<default>
+    +:F*
+    +:P*
+    ```
 
-### *Build Configurations* - Promote XX
+### [ NOT DO THIS FOR PERF / PP / PROD / DR ] *Build Configurations* - Promote XX 
 
 Convert Promote XX to Deploy by (if needed):
 
@@ -87,9 +96,32 @@ Convert Promote XX to Deploy by (if needed):
   - change `Runner type` to `OctopusDeploy: Deploy release`
   - fill all the mandatory fields (`API key` is in 1password)
   - save
-- [ NOT DO THIS FOR PERF / PP / PROD / DR ] Triggers > Finish Build Trigger
-  - clear up `Branch filter` text area
+- Triggers > Finish Build Trigger
+  - set `Branch filter` to
+
+    ```
+    +:<default>
+    +:F*
+    +:P*
+    ```
+
+### [ DO THIS FOR PERF / PP / PROD / DR ] *Build Configurations* - Promote XX 
+
+Convert Promote XX to Deploy by (if needed):
+
+- General settings
+  - rename the step
+  - click *Regenerate ID*
+  - change the `Build configuration type`
+- Build Step: OctopusDeploy: Promote release
+  - change `Runner type` to `OctopusDeploy: Deploy release`
+  - fill all the mandatory fields (`API key` is in 1password)
   - save
+- Triggers > Finish Build Trigger
+  - set `Branch filter` to
+    ```
+    +:<default>
+    ```
 
 ### *Edit VCS Root*
 
