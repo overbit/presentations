@@ -86,29 +86,7 @@ At the project level in parameters override:
     +:P*
     ```
 
-### [ NOT DO THIS FOR PERF / PP / PROD / DR ] *Build Configurations* - Promote XX 
-
-Convert Promote XX to Deploy XX (if needed):
-
-- General settings
-  - rename the step
-  - click *Regenerate ID*
-  - set `Build configuration type` to Deployment
-  - set `Limit the number of simultaneously running builds (0 — unlimited)` to `0`
-- Build Step: OctopusDeploy: Promote release
-  - change `Runner type` to `OctopusDeploy: Deploy release`
-  - fill all the mandatory fields (`API key` is in 1password)
-  - save
-- Triggers > Finish Build Trigger
-  - set `Branch filter` to
-
-    ```
-    +:<default>
-    +:F*
-    +:P*
-    ```
-
-### [ DO THIS FOR PERF / PP / PROD / DR ] *Build Configurations* - Promote XX 
+### *Build Configurations* - Promote XX 
 
 Convert Promote XX to Deploy XX (if needed):
 
@@ -120,6 +98,16 @@ Convert Promote XX to Deploy XX (if needed):
   - change `Runner type` to `OctopusDeploy: Deploy release`
   - fill all the mandatory fields (`API key` is in 1password)
   - save
+#### [ NOT FOR PERF / PP / PROD / DR ]
+- Triggers > Finish Build Trigger
+  - set `Branch filter` to
+
+    ```
+    +:<default>
+    +:F*
+    +:P*
+    ```
+#### [ PERF / PP / PROD / DR ]
 - Triggers > Finish Build Trigger
   - set `Branch filter` to
     ```
