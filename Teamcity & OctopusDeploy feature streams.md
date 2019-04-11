@@ -93,7 +93,8 @@ Convert Promote XX to Deploy XX (if needed):
 - General settings
   - rename the step
   - click *Regenerate ID*
-  - change the `Build configuration type`
+  - set `Build configuration type` to Deployment
+  - set `Limit the number of simultaneously running builds (0 — unlimited)` to `0`
 - Build Step: OctopusDeploy: Promote release
   - change `Runner type` to `OctopusDeploy: Deploy release`
   - fill all the mandatory fields (`API key` is in 1password)
