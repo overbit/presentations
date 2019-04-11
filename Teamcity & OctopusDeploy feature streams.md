@@ -40,6 +40,8 @@ At the project level in parameters override:
 - General settings
   - set `Build number format` to `%Build-Number-Format%`
   - save
+- Parameters:
+  - Change `Branch-Name` to `%teamcity.build.branch%`
 - Build Step: Command Line
   - inside the build step update the command parameter to `buildOnly -buildNumber %Build-Number-dotNetAssemblyVersion%`
 - Repeat for each build steps in the project if there are more than 1
