@@ -17,7 +17,7 @@ git checkout master && git pull && git submodule update
 Create one branch per stream
 
 ```sh
-git branch BAU && git branch stream/F1 && git branch stream/F2 && git branch stream/P1 && git branch stream/P2
+git branch stream/BAU && git branch stream/F1 && git branch stream/F2 && git branch stream/P1 && git branch stream/P2
 ```
 
 Push branches to remote
