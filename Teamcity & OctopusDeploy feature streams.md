@@ -30,10 +30,10 @@ git push -u origin stream/BAU stream/F1 stream/F2 stream/P1 stream/P2
 
 ### Variables
 
-At the project level override:
+At the project level in parameters override:
 
 - `Build-Number-MajorMinorPatch` in the format of `*.*.*` (`*` are digits only)
-- `Channel-Name` with value `Branch-Name`  ( when all project are migrated it will be done in the root level )
+- `Channel-Name` with value `%Branch-Name%`  ( when all project are migrated it will be done in the root level )
 
 ### *Build Configurations* - Builds
 
