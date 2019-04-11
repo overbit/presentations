@@ -109,7 +109,7 @@ Convert Promote XX to Deploy by (if needed):
 
 ### [ DO THIS FOR PERF / PP / PROD / DR ] *Build Configurations* - Promote XX 
 
-Convert Promote XX to Deploy by (if needed):
+Convert Promote XX to Deploy (if needed):
 
 - General settings
   - rename the step
