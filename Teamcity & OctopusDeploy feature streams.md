@@ -107,7 +107,7 @@ Convert Promote XX to Deploy XX (if needed):
     +:F*
     +:P*
     ```
-#### [ PERF / PP / PROD / DR ]
+#### [ PERF ]
 - Triggers > Finish Build Trigger
   - set `Branch filter` to
     ```
