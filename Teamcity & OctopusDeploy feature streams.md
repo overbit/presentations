@@ -126,9 +126,9 @@ Convert Promote XX to Deploy by (if needed):
 ### *Edit VCS Root*
 
 - General settings
-  - set `Default branch` to BAU
+  - set `Default branch` to stream/BAU
   - set `Branch specification` to
    ```
    +:refs/heads/stream/(*)
-   +:refs/heads/(BAU)
+   +:refs/heads/stream/(BAU)
    ```
