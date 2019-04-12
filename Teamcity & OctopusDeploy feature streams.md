@@ -8,7 +8,7 @@
 
 Check the octopus project has all the Channels setup.
 
-<OCTOPUS-SERVER-URL>/projects/net-skeleton/channels
+`OCTOPUS-SERVER-URL`/projects/net-skeleton/channels
 
 ## Git repository
 
