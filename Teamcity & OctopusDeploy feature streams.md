@@ -8,7 +8,7 @@
 
 Check the octopus project has all the Channels setup.
 
-http://octopus.abcam.com/app#/Spaces-1/projects/net-skeleton/channels
+<OCTOPUS-SERVER-URL>/projects/net-skeleton/channels
 
 ## Git repository
 
