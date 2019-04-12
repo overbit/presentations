@@ -1,5 +1,9 @@
 # Teamcity + Octopus feature streams
 
+## *NEW Project will be cloned from Skeleton*
+
+## *Update existing project guide*
+
 ## Octopus project
 
 Check the octopus project has all the Channels setup.
@@ -34,6 +38,7 @@ At the project level in parameters override:
 
 - `Build-Number-MajorMinorPatch` in the format of `*.*.*` (`*` are digits only)
 - `Channel-Name` with value `%Branch-Name%`  ( when all project are migrated it will be done in the root level )
+- `Branch-Name` with value `%dep.*****.Build.Branch-Name%%`  ( this is due to a problem in TC param evaluation )
 
 ### *Build Configurations* - Builds
 
@@ -42,8 +47,8 @@ At the project level in parameters override:
   - save
 - Parameters:
   - Change `Branch-Name` to `%teamcity.build.branch%`
-- Build Step: Command Line
-  - inside the build step update the command parameter to `buildOnly -buildNumber %Build-Number-dotNetAssemblyVersion%`
+- Build Step: Command Line [ ONLY FOR .NET BUILD STEPS ]
+  - inside the build step update the command parameter to `-buildNumber %Build-Number-dotNetAssemblyVersion%`
 - Repeat for each build steps in the project if there are more than 1
 
 ### *Build Configurations* - Create OctopusRelease
